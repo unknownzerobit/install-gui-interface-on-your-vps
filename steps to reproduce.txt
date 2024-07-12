@@ -1,0 +1,88 @@
+first my vps is from contabo and the default os was ubuntu 20.04 right so you need to upgrade this to 23.04 version it's stable with ibrahimxss tool because you need gui interface
+
+to show xss alerts on chrome browser 
+
+Terminal Commands that i used 
+
+==> sudo apt update
+
+==> sudo apt install xrdp
+
+==> sudo systemctl enable xrdp
+
+==> sudo ufw allow from any to any port 3389 proto tcp   #to use rdp service from your windows
+
+==> ip address  ( if u don't know what's your ip address of u vps )
+
+
+now you ready to use gui 
+
+search for remote desktop connection from u window's os search bar
+
+open it and connect to your vps with your credentials 
+
+
+6- now we should upgrade our os to use ibrahimxss
+
+==> sudo apt update
+==> sudo apt upgrade
+==> sudo apt dist-upgrade
+==> sudo do-release-upgrade
+
+
+u should now upgrade to ubuntu 22.04 but this version it also not work with ibrahimxss tool so we want to upgrade again :)
+
+by this commend 
+
+sudo do-release-upgrade
+
+
+#Note: 
+
+if you face issue like this 
+
+** Please install all available updates for your release before upgrading. **
+
+
+don't worry you can use this commend 
+
+==>  sudo apt upgrade
+
+so in may cause this package it's not install correctly as an example
+
+** 
+
+The following packages have been kept back:
+  libomp-dev
+
+**
+
+so just install it using this commends
+
+sudo apt install libomp-dev
+
+then run again this commend 
+
+==> sudo do-release-upgrade
+
+
+
+if you still face this issue or the package not install 
+
+** Please install all available updates for your release before upgrading.  **
+
+
+use this commend 
+
+==> sudo aptitude install libomp-dev
+
+
+so run again 
+
+==> sudo do-release-upgrade 
+
+should be work now and upgrade to version 23.04
+
+it take 10 min to 15 min to upgrade for new version 
+
+after that you should follow ibrahim steps to install ibrahimxss tool and should work successifully .
